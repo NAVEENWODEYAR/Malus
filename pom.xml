@@ -86,6 +86,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>Malus_Domestica_App</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
