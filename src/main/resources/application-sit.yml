@@ -1,0 +1,15 @@
+
+spring:
+  application:
+    name: Malus-Domestica
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/apldb?createDatabaseIfNotExist=true
+    username: ${Database}
+    password: ${Password}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 01212
