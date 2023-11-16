@@ -1,5 +1,7 @@
 package com.bhas.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -47,6 +49,15 @@ public class AppleController
 		Apple ap = appleService.getApl(aplId);
 				RequestDTO requestDTO = new RequestDTO("Apple found!", ap);
 				return new ResponseEntity<>(requestDTO,HttpStatus.FOUND);
+	}
+	
+	// 2.a
+	@GetMapping("/getApl's")
+	public ResponseEntity<RequestDTO> getApls()
+	{
+		List<Apple> apl = appleService.getApls();
+					RequestDTO requestDTO = new RequestDTO("Found in the db", apl);
+					return new ResponseEntity<RequestDTO>(requestDTO,HttpStatus.FOUND);
 	}
 	
 	// 3. Put for updating the data,

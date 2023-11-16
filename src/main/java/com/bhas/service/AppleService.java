@@ -1,7 +1,10 @@
 package com.bhas.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import com.bhas.dto.AppleDTO;
 import com.bhas.modal.Apple;
@@ -26,6 +29,13 @@ public class AppleService
 	public Apple getApl(Integer aplId)
 	{
 		return appleRepo.findById(aplId).get();
+	}
+	
+	// 2.a SELECT * FROM TABLE-NAME;
+	public List<Apple> getApls()
+	{
+		List<Apple> apl = appleRepo.findAll();
+		return apl;
 	}
 	
 	// 3. UPDATE
