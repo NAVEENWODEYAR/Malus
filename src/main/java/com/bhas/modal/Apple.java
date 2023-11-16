@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "")
+@Table(name = "Sebu")
 public class Apple 
 {
 	@Id
@@ -21,5 +21,9 @@ public class Apple
 	private int aplId;
 	
 	private String aplName;
+	
+	private double aplPrice;
+	
+	private String aplQty;
 
 }
