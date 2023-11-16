@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bhas.service.AppleService;
 
-@RestController("/apple")
+@RestController
 public class AppleController 
 {
 	// DI,
