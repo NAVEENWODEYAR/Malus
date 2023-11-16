@@ -15,3 +15,9 @@ spring:
     database-platform: org.hibernate.dialect.MySQL8Dialect
 server:
   port: 1212
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
