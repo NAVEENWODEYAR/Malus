@@ -15,26 +15,20 @@ public class AppleService
 	private AppleRepo appleRepo;
 	
 	// CRUD operations,
-	// 1. test EndPoint,s
-	public String greet()
-	{
-		return "Welcome to the Malus_App!,";
-	}
-	
-	// 2.INSERT INTO TABLE-NAME VALUES();
+	// 1.INSERT INTO TABLE-NAME VALUES();
 	public Apple insertAppl(AppleDTO aplDTO)
 	{
 		Apple ap = new Apple(aplDTO);
 		return appleRepo.save(ap);
 	}
 	
-	// 3. SELECT * FROM TABLE-NAME WHERE id = " ";
+	// 2. SELECT * FROM TABLE-NAME WHERE id = " ";
 	public Apple getApl(Integer aplId)
 	{
 		return appleRepo.findById(aplId).get();
 	}
 	
-	// 4. UPDATE
+	// 3. UPDATE
 	public Apple updateApl(Integer aplId,AppleDTO aplAppleDTO)
 	{
 		Apple ap = appleRepo.findById(aplId).get();
@@ -45,7 +39,7 @@ public class AppleService
 				return appleRepo.save(ap);
 	}
 	
-	// 5. DELETE
+	// 4. DELETE
 	public String deleteApl(Integer aplId)
 	{
 		appleRepo.deleteById(aplId);
