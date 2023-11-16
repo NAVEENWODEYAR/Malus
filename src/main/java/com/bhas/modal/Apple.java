@@ -1,5 +1,7 @@
 package com.bhas.modal;
 
+import com.bhas.dto.AppleDTO;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,5 +27,12 @@ public class Apple
 	private double aplPrice;
 	
 	private String aplQty;
+	
+	public Apple(AppleDTO aplDto)
+	{
+		this.aplName = aplDto.getAplName();
+		this.aplPrice = aplDto.getAplPrice();
+		this.aplQty = aplDto.getAplQty();
+	}
 
 }
