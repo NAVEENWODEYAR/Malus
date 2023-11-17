@@ -8,4 +8,4 @@ COPY target/Malus_Domestica_App.jar /usr/app
 
 WORKDIR /usr/app/ 
 
-ENTRYPOINT [ "java","-jar","Malus_Domestica_App.jar" ]
+ENTRYPOINT ["java","-jar","Malus_Domestica_App.jar"]
