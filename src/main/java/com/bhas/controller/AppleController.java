@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bhas.dto.AppleDTO;
@@ -26,7 +28,8 @@ public class AppleController
 	private AppleService appleService;
 	
 	// API's,
-	// 1. test EndPoint
+	// 1. test EndPoint,
+	@ResponseStatus(code = HttpStatus.UPGRADE_REQUIRED)
 	@GetMapping("/msg")
 	public String greet()
 	{
