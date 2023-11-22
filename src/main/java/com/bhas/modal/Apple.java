@@ -1,5 +1,7 @@
 package com.bhas.modal;
 
+import java.util.List;
+
 import com.bhas.dto.AppleDTO;
 
 import jakarta.persistence.Entity;
@@ -21,18 +23,16 @@ public class Apple
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int aplId;
-	
 	private String aplName;
-	
 	private double aplPrice;
-	
 	private String aplQty;
+	private List<Dealer> dealers;
 	
 	public Apple(AppleDTO aplDto)
 	{
 		this.aplName = aplDto.getAplName();
 		this.aplPrice = aplDto.getAplPrice();
 		this.aplQty = aplDto.getAplQty();
-	}
-
+		this.dealers = aplDto.getDealers();
+	};
 }
