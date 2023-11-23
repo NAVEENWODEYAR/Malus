@@ -45,6 +45,7 @@ public class AppleService
 				ap.setAplName(aplAppleDTO.getAplName());
 				ap.setAplPrice(aplAppleDTO.getAplPrice());
 				ap.setAplQty(aplAppleDTO.getAplQty());
+				ap.setDealers(aplAppleDTO.getDealers());;
 				
 				return appleRepo.save(ap);
 	}
