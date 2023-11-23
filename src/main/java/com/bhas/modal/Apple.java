@@ -26,6 +26,7 @@ public class Apple
 	private String aplName;
 	private double aplPrice;
 	private String aplQty;
+	
 	private List<Dealer> dealers;
 	
 	public Apple(AppleDTO aplDto)
