@@ -27,7 +27,6 @@ public class AppleController
 	@Autowired
 	private AppleService appleService;
 	
-	// API's,
 	// 1. test EndPoint,
 	@ResponseStatus(code = HttpStatus.UPGRADE_REQUIRED)
 	@GetMapping("/msg")
