@@ -2,7 +2,7 @@
 
 spring:
   application:
-    name: Apple
+    name: Malus-Domestica
     
   datasource:
     url: jdbc:h2:mem:testdb
