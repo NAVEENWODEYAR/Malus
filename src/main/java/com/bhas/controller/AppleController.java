@@ -58,7 +58,7 @@ public class AppleController
 	public ResponseEntity<RequestDTO> getApls()
 	{
 		List<Apple> apl = appleService.getApls();
-					RequestDTO requestDTO = new RequestDTO("Found in the db", apl);
+					RequestDTO requestDTO = new RequestDTO("Found in the db: {}", apl);
 					return new ResponseEntity<RequestDTO>(requestDTO,HttpStatus.FOUND);
 	}
 	
@@ -67,7 +67,7 @@ public class AppleController
 	public ResponseEntity<RequestDTO> updateApl(@PathVariable int aplId, @RequestBody AppleDTO appleDTO)
 	{
 		Apple ap = appleService.updateApl(aplId, appleDTO);
-			RequestDTO requestDTO = new RequestDTO("Successfully updated the Apple", ap);
+			RequestDTO requestDTO = new RequestDTO("Successfully updated the Apple: {}", ap);
 			return new ResponseEntity<RequestDTO>(requestDTO,HttpStatus.OK);
 	}
 	
@@ -76,7 +76,7 @@ public class AppleController
 	public ResponseEntity<RequestDTO> deleteApl(@PathVariable int aplId)
 	{
 		appleService.deleteApl(aplId);
-		RequestDTO requestDTO = new RequestDTO("Deleted", "Id"+aplId);
+		RequestDTO requestDTO = new RequestDTO("Deleted", "Id: {}",aplId);
 		return new ResponseEntity<RequestDTO>(requestDTO,HttpStatus.GONE);
 		
 	}
