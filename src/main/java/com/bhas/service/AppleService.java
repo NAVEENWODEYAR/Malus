@@ -54,7 +54,7 @@ public class AppleService
 	public String deleteApl(Integer aplId)
 	{
 		appleRepo.deleteById(aplId);
-		return "Deletion success full";
+		return "Deletion successfull";
 	}
 	
 }
