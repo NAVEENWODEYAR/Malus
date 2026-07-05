@@ -67,7 +67,7 @@ public class AppleController
 	public ResponseEntity<RequestDTO> updateApl(@PathVariable int aplId, @RequestBody AppleDTO appleDTO)
 	{
 		Apple ap = appleService.updateApl(aplId, appleDTO);
-			RequestDTO requestDTO = new RequestDTO("Successfully updated the Apple: {}", ap);
+			RequestDTO requestDTO = new RequestDTO("Successfully updated the entity: {}", ap);
 			return new ResponseEntity<RequestDTO>(requestDTO,HttpStatus.OK);
 	}
 	
@@ -76,7 +76,7 @@ public class AppleController
 	public ResponseEntity<RequestDTO> deleteApl(@PathVariable int aplId)
 	{
 		appleService.deleteApl(aplId);
-		RequestDTO requestDTO = new RequestDTO("Deleted", "Id: {}",aplId);
+		RequestDTO requestDTO = new RequestDTO("Deleted entity with", "Id: {}",aplId);
 		return new ResponseEntity<RequestDTO>(requestDTO,HttpStatus.GONE);
 		
 	}
