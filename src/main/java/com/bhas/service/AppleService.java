@@ -22,6 +22,7 @@ public class AppleService
 	public Apple insertAppl(AppleDTO aplDTO)
 	{
 		Apple ap = new Apple(aplDTO);
+System.out.println("Insert record into database ");
 		return appleRepo.save(ap);
 	}
 	
@@ -54,6 +55,7 @@ public class AppleService
 	public String deleteApl(Integer aplId)
 	{
 		appleRepo.deleteById(aplId);
+System.out.println("Deleted the record with Id "+aplId+");
 		return "Deletion successfull";
 	}
 	
