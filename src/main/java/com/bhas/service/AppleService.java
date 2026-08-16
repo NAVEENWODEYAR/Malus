@@ -22,7 +22,7 @@ public class AppleService
 	public Apple insertAppl(AppleDTO aplDTO)
 	{
 		Apple ap = new Apple(aplDTO);
-System.out.println("Insert record into database ");
+System.out.println("Insert new record into database");
 		return appleRepo.save(ap);
 	}
 	
