@@ -40,7 +40,7 @@ public class AppleController
 	public ResponseEntity<RequestDTO> insertApl(@RequestBody AppleDTO aplAppleDTO)
 	{
 		Apple ap = appleService.insertAppl(aplAppleDTO);
-				RequestDTO requestDTO = new RequestDTO("Apple inserted successfult", ap);
+				RequestDTO requestDTO = new RequestDTO("Apple inserted successfuly", ap);
 				return new ResponseEntity<RequestDTO>(requestDTO, HttpStatus.CREATED);
 	}
 	
@@ -49,7 +49,7 @@ public class AppleController
 	public ResponseEntity<RequestDTO> getApl(@PathVariable int aplId)
 	{
 		Apple ap = appleService.getApl(aplId);
-				RequestDTO requestDTO = new RequestDTO("Apple found!", ap);
+				RequestDTO requestDTO = new RequestDTO("Apple record found!", ap);
 				return new ResponseEntity<>(requestDTO,HttpStatus.FOUND);
 	}
 	
