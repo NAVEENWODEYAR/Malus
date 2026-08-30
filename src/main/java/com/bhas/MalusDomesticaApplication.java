@@ -10,7 +10,7 @@ public class MalusDomesticaApplication
 	public static void main(String[] args) 
 	{
 		SpringApplication.run(MalusDomesticaApplication.class, args);
-System.out.println("Domestic Apple");
+System.out.println("/nDomestic Apple/n");
 	}
 
 }
