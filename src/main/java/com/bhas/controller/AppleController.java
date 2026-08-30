@@ -67,7 +67,7 @@ public class AppleController
 	public ResponseEntity<RequestDTO> updateApl(@PathVariable int aplId, @RequestBody AppleDTO appleDTO)
 	{
 		Apple ap = appleService.updateApl(aplId, appleDTO);
-			RequestDTO requestDTO = new RequestDTO("Successfully updated the entity: {}", ap);
+			RequestDTO requestDTO = new RequestDTO("Successfully updated the record: {}", ap);
 			return new ResponseEntity<RequestDTO>(requestDTO,HttpStatus.OK);
 	}
 	
