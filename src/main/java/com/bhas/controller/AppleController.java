@@ -40,7 +40,7 @@ public class AppleController
 	public ResponseEntity<RequestDTO> insertApl(@RequestBody AppleDTO aplAppleDTO)
 	{
 		Apple ap = appleService.insertAppl(aplAppleDTO);
-				RequestDTO requestDTO = new RequestDTO("Apple inserted successfuly", ap);
+				RequestDTO requestDTO = new RequestDTO("Apple record inserted successfuly", ap);
 				return new ResponseEntity<RequestDTO>(requestDTO, HttpStatus.CREATED);
 	}
 	
