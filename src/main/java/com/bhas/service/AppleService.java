@@ -55,7 +55,7 @@ System.out.println("Inserting new record into database");
 	public String deleteApl(Integer aplId)
 	{
 		appleRepo.deleteById(aplId);
-System.out.println("Deleted the record from table with Id "+aplId+");
+System.out.println("Successfully deleted the record from table with Id "+aplId+");
 		return "Deletion successfull";
 	}
 	
