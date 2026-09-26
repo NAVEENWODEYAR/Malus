@@ -32,7 +32,7 @@ public class AppleController
 	@GetMapping("/msg")
 	public String greet()
 	{
-		return "Welcome to Malus_App,";
+		return "Welcome to Malus(Apple) application,";
 	}
 	
 	// 2. Post for sending the data,
@@ -54,7 +54,7 @@ public class AppleController
 	}
 	
 	// 2.a
-	@GetMapping("/getApl's")
+	@GetMapping("/list")
 	public ResponseEntity<RequestDTO> getApls()
 	{
 		List<Apple> apl = appleService.getApls();
